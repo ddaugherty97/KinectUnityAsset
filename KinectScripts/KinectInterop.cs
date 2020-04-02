@@ -1830,8 +1830,8 @@ namespace com.rfilkov.kinect
             sbBuf.Append(liRelTime).Append(delimiter);
 
             System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
-            int cur_time = (int)(System.DateTime.UtcNow - epochStart).TotalSeconds;
-
+            int cur_time = (int)((System.DateTime.UtcNow - epochStart).TotalSeconds)*1000;
+            
             sbBuf.Append(cur_time).Append(delimiter);
 
             fUnityTime = Time.time;
