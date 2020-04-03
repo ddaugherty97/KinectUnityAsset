@@ -1829,7 +1829,7 @@ namespace com.rfilkov.kinect
             sbBuf.Append("k4b").Append(delimiter);
             sbBuf.Append(liRelTime).Append(delimiter);
 
-            //getting epoch time in milliseconds format from unity
+            //getting epoch time
             long a = 1000;
             System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
             long cur_time_in_seconds = (long)(System.DateTime.UtcNow - epochStart).TotalSeconds;
