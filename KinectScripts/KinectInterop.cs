@@ -1829,12 +1829,10 @@ namespace com.rfilkov.kinect
             sbBuf.Append("k4b").Append(delimiter);
             sbBuf.Append(liRelTime).Append(delimiter);
 
-            //getting epoch time
-            long a = 1000;
+
+            //get epoch time
             System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
-            long cur_time_in_seconds = (long)(System.DateTime.UtcNow - epochStart).TotalSeconds;
-            long temporary_variable = (cur_time_in_seconds * a);
-            long cur_time = temporary_variable;
+            long cur_time = (long)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
             sbBuf.Append(cur_time).Append(delimiter);
 
             fUnityTime = Time.time;
