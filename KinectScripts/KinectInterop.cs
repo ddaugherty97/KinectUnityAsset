@@ -1830,7 +1830,7 @@ namespace com.rfilkov.kinect
             sbBuf.Append(liRelTime).Append(delimiter);
 
 
-            //get epoch time
+            //get epoch time format
             System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
             long cur_time = (long)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
             sbBuf.Append(cur_time).Append(delimiter);
